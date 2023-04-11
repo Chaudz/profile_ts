@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = require("mongoose");
 const userSchema = new mongoose_1.Schema({
-    name: { type: String },
-    email: { type: String },
+    nameSkill: { type: String },
+    percentSkill: { type: String },
 });
-const User = (0, mongoose_1.model)('User', userSchema);
-exports.default = User;
+const Skill = (0, mongoose_1.model)('skill', userSchema);
+exports.default = Skill;

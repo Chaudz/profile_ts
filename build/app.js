@@ -6,7 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const path_1 = __importDefault(require("path"));
 const index_1 = __importDefault(require("./routers/index"));
-const user_1 = __importDefault(require("./routers/user"));
+const introduce_1 = __importDefault(require("./routers/introduce"));
+const skill_1 = __importDefault(require("./routers/skill"));
 const connectDB_1 = require("./config/connectDB");
 //Init
 const app = (0, express_1.default)();
@@ -16,7 +17,8 @@ app.set('view engine', 'ejs');
 app.set('views', path_1.default.join(__dirname, 'views/'));
 //config routerss
 app.use('/', index_1.default);
-app.use('/', user_1.default);
+app.use('/', introduce_1.default);
+app.use('/', skill_1.default);
 // config static file
 app.use(express_1.default.static(path_1.default.join(__dirname, 'public')));
 //connect db

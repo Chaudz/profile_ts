@@ -12,17 +12,20 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.connect = void 0;
-const mongoose_1 = __importDefault(require("mongoose")); //mongosse change document to be object
-function connect() {
-    return __awaiter(this, void 0, void 0, function* () {
-        try {
-            yield mongoose_1.default.connect('mongodb+srv://chaudz:chauyeuai22@cluster0.l5kxahg.mongodb.net/MyCV');
-            console.log('DB connected okiii!!');
-        }
-        catch (error) {
-            console.log('DB connect fail !!');
-        }
-    });
+const skills_1 = __importDefault(require("../models/skills"));
+class SkillController {
+    index(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const skill = yield skills_1.default.find();
+            console.log(skill[0]);
+            res.render('skill', {
+                title: 'kinang',
+                javascript: skill[0],
+                html: skill[1],
+                css: skill[2],
+                csharp: skill[3],
+            });
+        });
+    }
 }
-exports.connect = connect;
+exports.default = new SkillController();

@@ -12,14 +12,21 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const user_1 = __importDefault(require("../models/user"));
-class UserController {
+const introduce_1 = __importDefault(require("../models/introduce"));
+class IntroduceController {
     index(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const users = yield user_1.default.find();
-            console.log(users);
-            res.render('index', { users: users });
+            const introduce = yield introduce_1.default.find();
+            res.render('introduce', {
+                title: 'Giới Thiệu',
+                name: introduce[0].name,
+                job: introduce[0].job,
+                email: introduce[0].email,
+                phone: introduce[0].phone,
+                web: introduce[0].web,
+                address: introduce[0].address,
+            });
         });
     }
 }
-exports.default = new UserController();
+exports.default = new IntroduceController();
