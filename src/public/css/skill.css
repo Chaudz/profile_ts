@@ -1,0 +1,32 @@
+.skill-wrapper{
+    max-width: 1000px;
+    width: 100%;
+}
+.skill-title{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.my-skill{
+    max-width: 20rem;
+    width: 100%;
+}
+.my-skill .container-skill{
+    width: 100%;
+    background-color: #ddd;
+}
+.my-skill .skill{
+    text-align: right;
+    padding: 10px 0;
+}
+.css{
+    width: 80%;
+    background-color: green;
+}
+.html{
+    width: 90%;
+    background-color: rgb(253, 14, 253);
+}
+.js, .csharp{
+    width: 70%;
+    background-color: rgb(158, 38, 38);
+}

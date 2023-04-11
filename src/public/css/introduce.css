@@ -1,0 +1,27 @@
+.introduce-page_wrapper{
+    max-width: 1000px;
+    width: 100%;
+    height: auto;
+}
+.introduce-page_img{
+    max-width: 200px;
+}
+.introduce-page_img span:nth-child(2){
+    font-size: 2rem;
+    font-weight: 600;
+}
+.introduce-page_img span:nth-child(3){
+    font-size: 1.5rem;
+}
+.introduce-page_img img{
+    width: 100%;
+}
+.introduce-page_about {
+    width: 100%;
+}
+.about-me_title{
+    font-size: 2rem;
+}
+.about-bio_title{
+    font-size: 2rem;
+}

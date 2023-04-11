@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/introduce.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
+  </head>
+  <body>
+    <%- include('partials/header'); -%>
+    <div class="introduce-page d-flex justify-content-center pt-5">
+      <div class="introduce-page_wrapper d-flex flex-column align-items-center">
+        <div class="introduce-page_img d-flex flex-column align-items-center justify-content-center">
+          <img src="https://res.cloudinary.com/dodw1z9by/image/upload/v1681193544/avt_z9ywcj.jpg" alt="" />
+          <span class="pt-1 text-light"><%= name %></span>
+          <span class="text-light"><%= job %></span>
+        </div>
+        <div class="introduce-page_icons d-flex gap-2">
+          <a href="#"> <i class="bi bi-facebook text-light"></i></a>
+          <a href="#"><i class="bi bi-twitter text-light"></i></a>
+          <a href="#"><i class="bi bi-instagram text-light"></i></a>
+          <a href="#"><i class="bi bi-github text-light"></i></a>
+        </div>
+        <div class="introduce-page_about row bg-light mt-3 p-3">
+          <div class="col-6 about-me">
+            <p class="about-me_title"><b>About Me</b></p>
+            <div class="about-me_content">
+              Xin chào, tôi là Châu. Tôi hiện tại 20 tuổi sinh sống tại <b>Đà Nẵng</b>. Tôi đang học tại
+              <b>Đông Á University</b> và hiện tại tôi đang làm việc tại FPT.<br />
+              Trong thời gian rảnh rỗi, tôi thường thích học tiếng anh và chơi game. Tôi cũng rất đam mê lập trình. Tôi tin
+              rằng mình là một chịu khó học hỏi.<br />
+              Tôi mong muốn có cơ hội được làm việc với các bạn và học hỏi thêm kinh nghiệm để phát triển bản thân cũng như
+              đóng góp cho công ty/đội nhóm.
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="about-bio">
+              <p class="about-bio_title"><b>Bio</b></p>
+              <div class="about-bio_detail d-flex flex-column gap-2">
+                <div><i class="bi bi-envelope"></i> <%= email %></div>
+                <div><i class="bi bi-telephone-fill"></i> 0<%= phone %></div>
+                <div><i class="bi bi-geo-alt-fill"></i><%= address %></div>
+                <div><i class="bi bi-browser-edge"></i> <%= web %></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
